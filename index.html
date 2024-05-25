@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="Images/pw-icon.png">
+</head>
+
+<body>
+    <p id="page-title">Random Password Generator 🔐</p>
+    <div id="container">
+        <div id="button-div"><button id="theme-btn" onclick="toggleLightMode()">Change Theme</button></div>
+        <div id="upper-content">
+            <p id="title">Generate a<br><span id="title-span">random password</span></p>
+            <p id="sub-title">Never use an insecure password again.</p>
+            <div id="middle-div">
+                <button id="generate-btn">Generate Passwords</button>
+                <div id="checkbox-div">
+                    <label for="symbols-check" class="checkbox-label">
+                        <input type="checkbox" id="symbols-check" />Allow Symbols
+                    </label>
+                    <label for="numbers-check" class="checkbox-label">
+                        <input type="checkbox" id="numbers-check"/>Allow Numbers
+                    </label>
+                </div>
+            </div>
+            <div id="char-div">
+                <label for="char-input" id="char-label">Character limit :
+                    <input type="text" id="char-input" />
+                </label>
+            </div>
+        </div>
+        <div id="lower-content">
+            <div id="left-pw" onclick="copyLeft()">
+                <p></p>
+            </div>
+            <div id="right-pw" onclick="copyRight()">
+                <p></p>
+            </div>
+        </div>
+        <div id="footer"><p>Click on the Password fields to copy to your clipboard.</p></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
